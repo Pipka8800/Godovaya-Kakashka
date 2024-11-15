@@ -160,3 +160,133 @@ a{
         font-size: 14px;
     }
 }
+
+/* short-search */
+.short-search {
+    background-image: url('../../images/img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    color: white;
+    min-height: 50vh;
+    padding: 96px 0;
+}
+
+.short-search form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.short-search label {
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.short-search select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    min-width: 150px;
+    background-color: white;
+}
+
+.short-search button[type="submit"] {
+    padding: 8px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.short-search button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* facts */
+.facts {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.facts h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.facts h2, .logo-text, .header a {
+    background: linear-gradient(to right, 
+        #ff0000, /* красный */
+        #ff8000, /* оранжевый */
+        #ffff00, /* желтый */
+        #00ff00, /* зеленый */
+        #0000ff, /* синий */
+        #4b0082, /* индиго */
+        #9400d3  /* фиолетовый */
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+.facts h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #4a90e2, #67b26f);
+    border-radius: 2px;
+}
+
+.facts ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+.facts li {
+    flex: 1;
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.facts li:hover {
+    transform: translateY(-5px);
+}
+
+.facts i {
+    font-size: 3rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.facts h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
