@@ -136,3 +136,96 @@ input:disabled, select:disabled, textarea:disabled {
     background-color: #f5f5f5;
     cursor: not-allowed;
 }
+
+.add form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 500;
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    outline: none;
+    transform: scale(1.01);
+}
+
+input[type="file"] {
+    background: #f1f3f4;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+label:has(+ input:focus),
+label:has(+ select:focus),
+label:has(+ textarea:focus) {
+    color: #3498db;
+    transform: translateX(10px);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Анимация при наведении */
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #bdc3c7;
+    background: #ffffff;
+}
+
+/* Стиль для чекбокса */
+label[for="agree"] {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+}
