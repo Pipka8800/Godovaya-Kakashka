@@ -1,0 +1,138 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+section {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+ 
+form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 16px; 
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    padding: 2rem 0;
+}
+
+.header a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        color: #007bff;
+        transform: translateX(-5px);
+    }
+
+    &::before {
+        content: '← ';
+        margin-right: 0.5rem;
+    }
+}
+
+.header-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.header-link:hover {
+    color: #007bff;
+}
+
+.add {
+    padding: 40px 0;
+}
+
+.container form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input[type="file"] {
+    padding: 8px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+label[for="agree"] {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+select {
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Стили для hover-эффекта */
+input:hover, select:hover, textarea:hover {
+    border-color: #4a90e2;
+}
+
+/* Стили для disabled-состояния */
+input:disabled, select:disabled, textarea:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
