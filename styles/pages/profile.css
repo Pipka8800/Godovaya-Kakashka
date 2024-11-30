@@ -323,3 +323,46 @@ header {
     font-size: 14px;
     margin: 0;
 }
+
+/* Адаптивность */
+@media (max-width: 575.98px) {
+    .profile-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .profile-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .profile-details {
+        width: 100%;
+    }
+
+    .pets-list {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+
+    .filter-wrapper {
+        padding: 0 15px;
+    }
+
+    .status-filter {
+        width: 100%;
+    }
+
+    .logout-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

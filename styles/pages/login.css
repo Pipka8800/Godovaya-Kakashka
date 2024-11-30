@@ -168,3 +168,5 @@ form button:hover {
 .login-form a:hover::after {
     width: 100%;
 }
+
+/* Адаптивность */

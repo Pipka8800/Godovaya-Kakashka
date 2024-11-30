@@ -143,7 +143,7 @@
                     </form> 
                 </div> 
                 <div class="search-item">
-                    <img src="images/img/negr.jpg" alt="Картинка">
+                    <img src="images/img/negr.jpg" alt="Картинка" class="responsive-image">
                 </div>
             </div> 
         </section>
@@ -215,6 +215,21 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
       },
+    // Добавляем брейкпоинты для адаптивности
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        }
+    }
     });
 
     var reviewsSwiper = new Swiper(".reviews-swiper", {
@@ -224,6 +239,21 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+    // Добавляем брейкпоинты для адаптивности
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        }
+    }
     });
   </script>
 </body>
