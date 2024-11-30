@@ -24,7 +24,7 @@
         <nav>
             <ul>
                 <li><a href="#" class="search"><i class="fa fa-search"></i></i> Поиск</a></li>
-                <li><a href="#" class="register"><i class="fa fa-user-plus"></i> Регистрация</a></li>
+                <li><a href="register.html" class="register"><i class="fa fa-user-plus"></i> Регистрация</a></li>
                 <li><a href="login.html" class="profile"><i class="fa fa-user"></i> Личный кабинет</a></li>
                 <li><a href="#" class="add"><i class="fa fa-plus-circle"></i> Добавить</a></li>
                 <li><a href="#" class="reviews"><i class="fa fa-comments"></i> Отзывы</a></li>
@@ -215,21 +215,7 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
       },
-    // Добавляем брейкпоинты для адаптивности
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 10
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 20
-        },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 30
-        }
-    }
+
     });
 
     var reviewsSwiper = new Swiper(".reviews-swiper", {
