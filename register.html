@@ -19,16 +19,16 @@
     </header>
     <main>
         <section>
-            <form class="register-form">
+            <form class="register-form" action="api/register.php" method="POST">
                 <h1 class="register-form-title">Регистрация</h1>
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="example@mail.com">
+                <input name="email" type="email" id="email" placeholder="example@mail.com">
                 <label for="username">Имя</label>
-                <input type="text" id="username" placeholder="Имя">
+                <input name="name" type="text" id="username" placeholder="Имя">
                 <label for="surname">Фамилия</label>
-                <input type="text" id="surname" placeholder="Фамилия">
+                <input name="surname" type="text" id="surname" placeholder="Фамилия">
                 <label for="phone">Телефон</label>
-                <input type="tel" id="phone" placeholder="Телефон">
+                <input name="phone" type="tel" id="phone" placeholder="Телефон">
                 <label for="password">Пароль</label>
                 <input type="password" id="password" name="password">
                 <label for="password-confirm">Подтверждение пароля</label>
