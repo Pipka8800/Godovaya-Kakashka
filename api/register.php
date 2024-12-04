@@ -17,12 +17,24 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
     $errors = [];
     //Проверка + очистка данных
-    // Проверка на пустоту
+    foreach($formData as $key => $value){
+        $formData[$key] = $value;
+    }
+
+    // Проверка на существование ключа + пустота значения
     foreach($fields as $idx => $field){
-        if(!$formData[$field]){
-            $errors[][$field] = 'Pole nada zapolnit';
+        //проверка на существование ключа
+        if(array_key_exists($field, $formData)){
+            // Проверка на пустоту значения
+            if($formData[$field]){
+                //если дошли сюда, выходим из цикла, чтобы ошибка не записалась
+            continue;
         }
+        
       }
+      // Дописать проверку на пустоту значения
+        $errors[][$field] = 'Pole nada zapolnit';
+    }
     // Проверка правильнсти вводы пароля
     // Проверка уникальности
 
