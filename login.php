@@ -20,13 +20,28 @@
     </header>
     <main>
         <section>
+        <?php 
+            function showError($field) {
+                if (!array_key_exists('auth-errors', $_SESSION)) {
+                    echo '';
+                } else {
+                    $listErrors = $_SESSION['auth-errors'];
+
+                    if (array_key_exists($field, $listErrors)) {
+                        $error = implode(',', $listErrors[$field]); 
+        
+                        echo "<span class='error'>$error</span>";
+                    }
+                }
+            }
+        ?>
             <form class="login-form" action="api/authUser.php" method="POST">
                 <h1 class="login-form-title">Авторизация</h1>
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="example@mail.com">
-                <label for="password">Пароль</label>
+                <label for="email">Email<?php showError('email');?></label>
+                <input name='email' type="email" id="email" placeholder="example@mail.com">
+                <label for="password">Пароль<?php showError('password');?></label>
                 <input type="password" id="password" name="password">
-                <button type="submit">Войти</a></button>
+                <button type="submit">Войти</button>
                 <a href="register.html">Регистрация</a>
             </form>
         </section>
