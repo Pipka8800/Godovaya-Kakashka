@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -19,7 +20,7 @@
     </header>
     <main>
         <section>
-            <form class="login-form" action="profile.html">
+            <form class="login-form" action="api/authUser.php" method="POST">
                 <h1 class="login-form-title">Авторизация</h1>
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="example@mail.com">

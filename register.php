@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -18,23 +19,39 @@
         </div>
     </header>
     <main>
+                <!-- https://github.com/RayStell -->
+        <?php 
+            function showError($field) {
+                if (!array_key_exists('register-errors', $_SESSION)) {
+                    echo '';
+                } else {
+                    $listErrors = $_SESSION['register-errors'];
+
+                    if (array_key_exists($field, $listErrors)) {
+                        $error = implode(',', $listErrors[$field]); 
+        
+                        echo "<span class='error'>$error</span>";
+                    }
+                }
+            }
+        ?>
         <section>
-            <form class="register-form" action="api/register.php" method="POST">
+            <form class="register-form" action="api/registrationUser.php" method="POST">
                 <h1 class="register-form-title">Регистрация</h1>
-                <label for="email">Email</label>
+                <label for="email">Email<?php showError('email');?></label>
                 <input name="email" type="email" id="email" placeholder="example@mail.com">
-                <label for="username">Имя</label>
+                <label for="username">Имя<?php showError('name');?></label>
                 <input name="name" type="text" id="username" placeholder="Имя">
-                <label for="surname">Фамилия</label>
+                <label for="surname">Фамилия<?php showError('surname');?></label>
                 <input name="surname" type="text" id="surname" placeholder="Фамилия">
-                <label for="phone">Телефон</label>
+                <label for="phone">Телефон<?php showError('phone');?></label>
                 <input name="phone" type="tel" id="phone" placeholder="Телефон">
-                <label for="password">Пароль</label>
+                <label for="password">Пароль<?php showError('password');?></label>
                 <input type="password" id="password" name="password">
-                <label for="password-confirm">Подтверждение пароля</label>
+                <label for="password-confirm">Подтверждение пароля<?php showError('password-confirm');?></label>
                 <input type="password" id="password-confirm" name="password-confirm">
                 <div class="checkbox-wrapper">
-                    <label for="agree">Согласие на обработку персональных данных</label>
+                    <label for="agree">Согласие на обработку персональных данных<?php showError('agree');?></label>
                     <input type="checkbox" id="agree" name="agree">
                 </div>
                 <button type="submit">Регистрация</button>
