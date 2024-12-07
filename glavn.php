@@ -20,7 +20,7 @@
     <header class="header">
         <!-- Логотип -->
         <div class="container">
-            <a href="glavn.html" class="logo"><img src="images/logo.png" alt="Логотип"><span class="logo-text">Типа новая жзн</span></a>
+            <a href="glavn.php" class="logo"><img src="images/logo.png" alt="Логотип"><span class="logo-text">Типа новая жзн</span></a>
         <!-- Меню навигации -->
         <nav>
             <ul>

@@ -15,7 +15,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <a href="glavn.html" class="header-link"><i class="fa fa-home"></i> На главную</a>
+            <a href="glavn.php" class="header-link"><i class="fa fa-home"></i> На главную</a>
         </div>
     </header>
     <main>
@@ -55,7 +55,7 @@
                     <input type="checkbox" id="agree" name="agree">
                 </div>
                 <button type="submit">Регистрация</button>
-                <a href="login.html">Авторизация</a>
+                <a href="login.php">Авторизация</a>
             </form>
         </section>
     </main>

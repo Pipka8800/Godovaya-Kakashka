@@ -16,8 +16,8 @@
 
 <header class="header">
     <div class="container">
-        <a href="glavn.html" class="header-link">← <i class="fa fa-home"></i> На главную</a>
-        <a href="poisk.html" class="header-link"><i class="fa fa-search"></i> Поиск</a>
+        <a href="glavn.php" class="header-link">← <i class="fa fa-home"></i> На главную</a>
+        <a href="poisk.php" class="header-link"><i class="fa fa-search"></i> Поиск</a>
     </div>
 </header>
 

@@ -16,7 +16,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <a href="glavn.html" class="header-link"><i class="fa fa-home"></i> На главную </a>
+            <a href="glavn.php" class="header-link"><i class="fa fa-home"></i> На главную </a>
         </div>
     </header>
     <main>
