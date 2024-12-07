@@ -42,7 +42,7 @@
                 <label for="password">Пароль<?php showError('password');?></label>
                 <input type="password" id="password" name="password">
                 <button type="submit">Войти</button>
-                <a href="register.html">Регистрация</a>
+                <a href="register.php">Регистрация</a>
             </form>
         </section>
     </main>

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +37,7 @@
                                 <li><i class="fa fa-paw"></i> Питомцев: <span>5</span></li>
                                 <li><i class="fa fa-hourglass-end"></i> Дата регистрации: <span>13.11.2024</span></li>
                             </ul>
-                            <button class="logout-btn" onclick="window.location.href='glavn.html'">
+                            <button class="logout-btn" onclick="window.location.href='glavn.php'">
                                 <i class="fa fa-sign-out"></i> Выйти
                             </button>
                         </div>

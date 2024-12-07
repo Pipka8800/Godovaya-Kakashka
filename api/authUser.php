@@ -39,7 +39,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
     if (empty($errors)){
-        echo 123;
+        $email = $formData['email'];
+        $password = $formData['password'];
+        $hash = time();
+        $token = base64_encode("hash=$hash&email=$email&password=$password");
+
+        $db->query("
+            UPDATE users SET api_token='$token' 
+            WHERE email='$email' AND password='$password'
+        ")->fetchAll();
+
+        echo $token;
+
+        $_SESSION['token'] = $token;
+        header('Location: ../profile.php');
     }
     if (!empty($errors)){
         $_SESSION['auth-errors'] = $errors;
