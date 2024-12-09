@@ -1,4 +1,33 @@
-<?php session_start(); ?>
+<?php session_start();
+
+//Проверка на аутентификацию
+
+include_once ('api/db.php');
+
+if(array_key_exists('token', $_SESSION)){
+    //Если токен есть, то проверяем его в базе данных
+    $token = $_SESSION['token'];
+    $userId = $db->query("
+    SELECT id,type FROM users WHERE api_token = '$token'
+    ")->fetchAll();
+
+    if(empty($userId)){
+        //Удаление токена из сессии
+        unset($_SESSION['token']);
+        header('Location: login.php');
+    } else{
+        $type = $userId[0]['type'];
+        if($type != 'mod'){
+            header('Location: glavn.php');
+        }
+    }
+    
+} else{
+    //Если токена нет, то перекидываем на главную
+    header('Location: login.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
