@@ -1,4 +1,19 @@
-<?php session_start(); ?>
+<?php session_start();
+
+include_once 'api/db.php';
+
+$searchParams = $_GET;
+$posts;
+if(!empty($searchParams)){
+    $animalType = $searchParams['animal-type'];
+    $adress = $searchParams['adress'];
+
+    $posts = $db->query("
+    SELECT * FROM posts WHERE type_animal = '$animalType' OR adress = '$adress'
+    ")->fetchAll();
+    // echo json_encode($posts);
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -12,13 +27,13 @@
     <main>
         <!-- Форма поиска -->
         <section class="search-section">
-            <form class="search-form">
+            <form method="GET" action="poisk.php" class="search-form">
                 <select name="animal-type" id="animal-type">
                     <option value="">Вид животного</option>
                     <option value="cat">Кошка</option>
                     <option value="dog">Собака</option>
                 </select>
-                <input type="text" name="district" placeholder="Район">
+                <input name="adress" type="text" name="district" placeholder="Район">
                 <button type="submit">Найти</button>
             </form>
         </section>
@@ -35,20 +50,36 @@
                             <th>Клеймо</th>
                             <th>Район</th>
                             <th>Дата находки</th>
-                            <th>Контакты</th>
+                            <th>Ссылки</th>
                         </tr>
                     </thead>
                     <tbody>
                         <!-- Пример строки таблицы -->
-                        <tr>
-                            <td>Кошка</td>
-                            <td><img src="images/img/pit.jpg" alt="Фото животного"></td>
-                            <td>Найдена в парке, ласковая</td>
-                            <td>A123</td>
-                            <td>Центральный</td>
-                            <td>01.03.2024</td>
-                            <td>+7 (999) 123-45-67</td>
-                        </tr>
+                        <?php 
+                            //вывод постов
+                            if(!empty($posts)){
+                            foreach($posts as $key => $value){
+                                $type = $value['type_animal'];
+                                $des = $value['description'];
+                                $mark = $value['mark'];
+                                $adress = $value['adress'];
+                                $date = $value['date_found'];
+                                $id = $value['id'];
+                                echo"
+                                    <tr>
+                                        <td>$type</td>
+                                        <td><img src='images/img/pit.jpg' alt='Фото животного'></td>
+                                        <td>$des</td>
+                                        <td>$mark</td>
+                                        <td>$adress</td>
+                                        <td>$date</td>
+                                        <td><a href='info.php?id=$id'>Подробнее</a></td>
+                                    </tr>
+                                ";
+                            }
+                        }
+                         ?>
+
                     </tbody>
                 </table>
             </div>

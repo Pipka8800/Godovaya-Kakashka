@@ -12,3 +12,24 @@ CREATE TABLE users (
     api_token VARCHAR(256)
 );
 
+11.12.2024
+3) CREATE TABLE POST (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    type_animal VARCHAR(256),
+    description VARCHAR(256),
+    mark VARCHAR(256),
+    adress VARCHAR(256),
+    date_found DATE
+);
+
+4) ALTER TABLE post
+ADD FOREIGN KEY(user_id) REFERENCES users(id);
+
+5) Заполняем таблицу POST
+INSERT INTO posts (user_id, type_animal, description, mark, adress, date_found) VALUES
+(1, 'dog', 'Bol'shaya chernaya sobaka, druzhelyubnaya', 'Sharik', 'ul. Lenina, 10', '2023-10-01'),
+(2, 'cat', 'Malen'kaya belaya koshka s serymi pyatnami', 'Murka', 'pr. Mira, 5', '2023-10-02'),
+(3, 'popugai', 'Yarko-krasnyy popugay, govorit neskol'ko slov', 'Kesha', 'ul.Pushkina, 15', '2023-10-03');
+(данные нужно на английском заполнить)
+
