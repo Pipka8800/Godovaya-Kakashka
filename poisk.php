@@ -9,7 +9,8 @@ if(!empty($searchParams)){
     $adress = $searchParams['adress'];
 
     $posts = $db->query("
-    SELECT * FROM posts WHERE type_animal = '$animalType' OR adress = '$adress'
+    SELECT * FROM posts WHERE (type_animal = '$animalType' OR adress = '$adress')
+    AND (status = 'active')
     ")->fetchAll();
     // echo json_encode($posts);
 }
@@ -32,6 +33,7 @@ if(!empty($searchParams)){
                     <option value="">Вид животного</option>
                     <option value="cat">Кошка</option>
                     <option value="dog">Собака</option>
+                    <option value="bird">Птица</option>
                 </select>
                 <input name="adress" type="text" name="district" placeholder="Район">
                 <button type="submit">Найти</button>

@@ -44,7 +44,7 @@ CREATE TABLE `posts` (
 INSERT INTO `posts` (`id`, `user_id`, `type_animal`, `description`, `mark`, `adress`, `date_found`) VALUES
 (1, 1, 'dog', 'Bol\'shaya chernaya sobaka, druzhelyubnaya', 'Sharik', 'ul. Lenina, 10', '2023-10-01'),
 (2, 2, 'cat', 'Malen\'kaya belaya koshka s serymi pyatnami', 'Murka', 'pr. Mira, 5', '2023-10-02'),
-(3, 3, 'popugai', 'Yarko-krasnyy popugay, govorit neskol\'ko slov', 'Kesha', 'ul.Pushkina, 15', '2023-10-03');
+(3, 3, 'bird', 'Yarko-krasnyy popugay, govorit neskol\'ko slov', 'Kesha', 'ul.Pushkina, 15', '2023-10-03');
 
 -- --------------------------------------------------------
 

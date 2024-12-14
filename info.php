@@ -54,34 +54,34 @@ echo json_encode($user);
                     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                         </div>
                         <div class="swiper-button-next"></div>
@@ -90,46 +90,47 @@ echo json_encode($user);
                       <div thumbsSlider="" class="swiper mySwiper">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                           <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                            <img src="images/img/negr.jpg" />
                           </div>
                         </div>
                       </div>
                 </div>
                 <div class="info_item">
-                    <time datetime="29-11-2024">29.11.2024</time>
-                    <h2>Кот</h2>
-                    <p>Кировсикй р-н</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-                    <p>Иванов Иван</p>
-                    <a href="tel:89231898840">8 (923) 189 88-40</a>
-                    <a href="mailto:example@mail.ru">example@mail.ru</a>
+                    <time datetime="29-11-2024"><?php echo $post[0]['date_found']?></time>
+                    <small><?php echo $post[0]['status']?></small>
+                    <h2><?php echo $post[0]['type_animal']?></h2>
+                    <p><?php echo $post[0]['adress']?></p>
+                    <p><?php echo $post[0]['description']?></p>
+                    <p><?php echo $user[0]['name']." ".$user[0]['surname']?></p>
+                    <?php $phone = $user[0]['phone']; echo "<a href='tel:$phone'>$phone</a>"?>
+                    <?php $email = $user[0]['email']; echo "<a href='mailto:$email'>$email</a>"?>
                 </div>
             </div>
         </section>
